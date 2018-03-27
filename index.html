@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title></title>
 </head>
 <body>
 	<div class="nav">
-		<ul>
+		<ul class="list">
 			<li><a>nav1</a></li>
 			<li><a>nav2</a></li>
 			<li><a>nav3</a></li>
@@ -13,4 +14,13 @@
 		</ul>
 	</div>
 </body>
-</html>h
+</html>
+<script type="text/javascript">
+	$nav=document.getElementsByTagName('li');
+	for(var $i=0;$i<$nav.length;$i++){
+		$nav[$i].index=$i;
+		$nav[$i].onclick=function(){
+			console.log(this.index);
+		}
+	}
+</script>
